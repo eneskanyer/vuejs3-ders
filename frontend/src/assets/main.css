@@ -1,0 +1,221 @@
+@import './base.css';
+
+/* =========================================
+   GENEL AYARLAR
+========================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Vue uygulamasının ekran dışına taşmasını engeller */
+#app {
+  width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+/* =========================================
+   GENEL RESPONSIVE KURALLAR
+========================================= */
+
+/* Resimler taşmasın */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Video ve iframe taşmasın */
+video,
+iframe {
+  max-width: 100%;
+}
+
+/* Uzun yazılar layout'u bozmasın */
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+td,
+th {
+  overflow-wrap: break-word;
+}
+
+/* Form elemanları ekran dışına taşmasın */
+input,
+select,
+textarea,
+button {
+  max-width: 100%;
+}
+
+/* Flex elemanlarının küçülmesine izin ver */
+.row > *,
+.d-flex > *,
+[class*="col-"] {
+  min-width: 0;
+}
+
+/* =========================================
+   BOOTSTRAP CONTAINER
+========================================= */
+
+.container,
+.container-fluid {
+  width: 100%;
+}
+
+/* Çok dar ekranlarda container kenar boşluğu */
+@media (max-width: 576px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* =========================================
+   TABLOLAR
+========================================= */
+
+/* Tablolar ekran dışına taşarsa kaydırılabilir */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Normal tablolar */
+table {
+  max-width: 100%;
+}
+
+/* =========================================
+   FORM ALANLARI
+========================================= */
+
+.form-control,
+.form-select {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Input group dar ekranda taşmasın */
+.input-group {
+  max-width: 100%;
+  min-width: 0;
+}
+
+/* =========================================
+   SEPET SIDEBAR
+========================================= */
+
+.sepetsidebar {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  z-index: 9999;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navlink {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.navlink:hover {
+  font-weight: bold;
+  color: white;
+}
+
+/* Küçük ekranlarda navbar elemanları taşmasın */
+@media (max-width: 991px) {
+  .navlink {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* =========================================
+   HAKKIMIZDA
+========================================= */
+
+.hakkimizda {
+  background-color: #CFE2FF;
+  padding: 50px;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+
+@media (max-width: 576px) {
+  .hakkimizda {
+    padding: 25px 20px;
+    margin-top: 25px;
+  }
+}
+
+/* =========================================
+   DAR EKRANLAR İÇİN GENEL AYAR
+========================================= */
+
+@media (max-width: 991px) {
+
+  /* Bootstrap kolonları gerektiğinde alt alta geçsin */
+  .row > [class*="col-lg-"] {
+    width: 100%;
+  }
+
+  /* Sabit genişlikli elemanlar taşmasın */
+  .card,
+  .modal-dialog,
+  .offcanvas {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Orta ekranlarda md kolonları alt alta geçsin */
+  .row > [class*="col-md-"] {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+
+  body {
+    font-size: 14px;
+  }
+
+  /* Büyük başlıklar ekrana sığsın */
+  h1 {
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+}

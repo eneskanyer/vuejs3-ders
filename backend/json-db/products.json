@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Ray-Ban",
+    "model": "Star Wars™ Grogu Mega",
+    "stock": 0,
+    "price": 700,
+    "image1": "/uploads/products/1787480973873-183227026.jpg",
+    "image2": "/uploads/products/1787480973877-427743913.jpg",
+    "image3": "/uploads/products/1787480973878-630254851.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Versace",
+    "model": "VE2287",
+    "stock": 12,
+    "price": 200,
+    "image1": "/uploads/products/1787481299803-540808626.jpg",
+    "image2": "/uploads/products/1787481299805-499994512.jpg",
+    "image3": null
+  },
+  {
+    "id": 3,
+    "name": "Ray-Ban",
+    "model": "Wayfarer Puffer",
+    "stock": 12,
+    "price": 300,
+    "image1": null,
+    "image2": null,
+    "image3": null
+  }
+]
